@@ -18,4 +18,4 @@ Features ✨
 
 Working Project Link : https://drive.google.com/drive/folders/10lEkERJae_ir1pmKN7zxfH-gPbi_1Gr-?usp=drive_link
 
-Contributions 🤝 are welcome! Please open an issue or submit a pull request.
+Contributors 🤝 are welcome! Please open an issue or submit a pull request.
