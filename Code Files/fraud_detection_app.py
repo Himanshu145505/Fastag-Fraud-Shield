@@ -86,9 +86,11 @@ smote = SMOTE(random_state=42)
 X_train_res, y_train_res = smote.fit_resample(X_train_transformed, y_train)
 
 # Train the model
+# Training the Model Based on the dataset 
 model.named_steps['classifier'].fit(X_train_res, y_train_res)
 
 # Predict on test data
+# Using the second set of data for prediction
 y_pred = model.named_steps['classifier'].predict(X_test_transformed)
 
 # Evaluate the model
