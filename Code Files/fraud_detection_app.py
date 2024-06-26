@@ -94,6 +94,7 @@ model.named_steps['classifier'].fit(X_train_res, y_train_res)
 y_pred = model.named_steps['classifier'].predict(X_test_transformed)
 
 # Evaluate the model
+# Calculating the Prediction Accuracy (How much it Mathches with the result of training)
 print('Accuracy:', accuracy_score(y_test, y_pred))
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
@@ -101,6 +102,7 @@ print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 
 # Feature importance
+# The Attributes that are used for predictions
 feature_importance = model.named_steps['classifier'].feature_importances_
 feature_names = model.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names_out()
 all_feature_names = numeric_features + list(feature_names)
