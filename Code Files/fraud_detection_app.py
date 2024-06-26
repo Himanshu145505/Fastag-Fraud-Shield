@@ -102,7 +102,7 @@ print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 
 # Feature importance
-# The Attributes that are used for predictions
+# The Attributes that are used for predictions 'Transaction_Amount', 'Amount_paid', 'Vehicle_Speed', 'Hour', 'Day_of_Week and other categorial information like geographical area, vechicle dimention etc.
 feature_importance = model.named_steps['classifier'].feature_importances_
 feature_names = model.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names_out()
 all_feature_names = numeric_features + list(feature_names)
