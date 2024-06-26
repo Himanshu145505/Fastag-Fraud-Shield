@@ -1,15 +1,25 @@
+# Required Imports
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# Sklearn Mode for Selection
 from sklearn.model_selection import train_test_split
+# model for preprocessing the data
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+# model for composing
 from sklearn.compose import ColumnTransformer
+# for setting pipeline
 from sklearn.pipeline import Pipeline
+# for imputing
 from sklearn.impute import SimpleImputer
+# ensemle using Random Forest
 from sklearn.ensemble import RandomForestClassifier
+# Metrics of data
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from imblearn.over_sampling import SMOTE
+
 from flask import Flask, request, jsonify
 
 # Load the dataset
