@@ -19,7 +19,7 @@ from sklearn.ensemble import RandomForestClassifier
 # Metrics of data
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 from imblearn.over_sampling import SMOTE
-
+# Flask Application Imports
 from flask import Flask, request, jsonify
 
 # Load the dataset
@@ -29,6 +29,7 @@ data = pd.read_csv('FastagFraudDetection.csv')
 print(data.info())
 print(data.describe())
 print(data['Fraud_indicator'].value_counts())
+
 
 sns.countplot(x='Fraud_indicator', data=data)
 plt.show()
@@ -45,6 +46,7 @@ X = data.drop(columns=['Fraud_indicator'])
 y = data['Fraud_indicator']
 
 # Split the dataset
+# So we have one data file that contains data Fastag Fraud So we will split that data into two parts one will be used for traning and the second part will be used for testing the accuracy of predictions
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 # Preprocessing pipeline
