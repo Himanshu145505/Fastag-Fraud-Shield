@@ -117,6 +117,7 @@ plt.show()
 # Flask app for real-time prediction
 app = Flask(__name__)
 
+# Real time predictions
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
