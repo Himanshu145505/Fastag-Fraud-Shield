@@ -50,13 +50,16 @@ y = data['Fraud_indicator']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 # Preprocessing pipeline
+# Some of the Attributes for Pipeline
 numeric_features = ['Transaction_Amount', 'Amount_paid', 'Vehicle_Speed', 'Hour', 'Day_of_Week']
 categorical_features = ['Vehicle_Type', 'FastagID', 'TollBoothID', 'Lane_Type', 'Geographical_Location', 'Vehicle_Dimensions']
 
+# Numeric Imputing the Pipeline
 numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='median')),
     ('scaler', StandardScaler())])
 
+# Categorical Imputing of Pipeline
 categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
