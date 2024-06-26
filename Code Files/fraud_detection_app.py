@@ -64,6 +64,7 @@ categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
 
+# Preprocessing the Pipleline
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
@@ -76,6 +77,7 @@ model = Pipeline(steps=[
 ])
 
 # Preprocess the training data first
+X stand for the first set of data that will be used for training and Y stand for 2nd set of data that will be used for testting
 X_train_transformed = preprocessor.fit_transform(X_train)
 X_test_transformed = preprocessor.transform(X_test)
 
