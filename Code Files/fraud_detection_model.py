@@ -1,7 +1,10 @@
+Required Imports 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# Preprocessing, pipeline, compose, ensemble , impute and other imports from Scikit Learn
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
