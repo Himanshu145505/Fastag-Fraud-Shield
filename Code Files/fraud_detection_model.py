@@ -62,7 +62,7 @@ categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
 
-category and numeric preprocessing
+# category and numeric preprocessing
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
@@ -79,6 +79,7 @@ smote = SMOTE(random_state=42)
 X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
 
 # Preprocess the data
+the data is being divided into two parts X and Y. X will be used for traning the data and y will be used for testing.
 X_train_processed = preprocessor.fit_transform(X_train_res)
 X_test_processed = preprocessor.transform(X_test)
 
