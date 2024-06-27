@@ -1,4 +1,4 @@
-Required Imports 
+# Required Imports 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -79,17 +79,19 @@ smote = SMOTE(random_state=42)
 X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
 
 # Preprocess the data
-the data is being divided into two parts X and Y. X will be used for traning the data and y will be used for testing.
+# the data is being divided into two parts X and Y. X will be used for traning the data and y will be used for testing.
 X_train_processed = preprocessor.fit_transform(X_train_res)
 X_test_processed = preprocessor.transform(X_test)
 
 # Train the model
+
 model.fit(X_train_processed, y_train_res)
 
-# Predict on test data
+# Prediction on DataSet Y 
 y_pred = model.predict(X_test_processed)
 
 # Evaluate the model
+Model Performance Evaluation
 print('Accuracy:', accuracy_score(y_test, y_pred))
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
