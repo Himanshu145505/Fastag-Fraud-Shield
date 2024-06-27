@@ -15,6 +15,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 from imblearn.over_sampling import SMOTE
 
 # Load the dataset
+# Dataset import that contain data for training and testing purposes
 data = pd.read_csv('FastagFraudDetection.csv')
 
 # Data exploration
