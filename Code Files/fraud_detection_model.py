@@ -27,6 +27,7 @@ sns.countplot(x='Fraud_indicator', data=data)
 plt.show()
 
 # Data preprocessing
+# Preprocessing Fastag Id, Transaction Id and other details
 data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%m/%d/%Y %H:%M')
 data['Hour'] = data['Timestamp'].dt.hour
 data['Day_of_Week'] = data['Timestamp'].dt.dayofweek
@@ -37,6 +38,8 @@ data['Fraud_indicator'] = data['Fraud_indicator'].map({'Fraud': 1, 'Not Fraud': 
 # One-hot encode categorical variables
 data = pd.get_dummies(data, columns=['Vehicle_Type'])
 
+
+# Spliting the data into two indicator for dataset x and y that are derived the the main dataset FasTagfraudDetection.csv
 X = data.drop(columns=['Fraud_indicator'])
 y = data['Fraud_indicator']
 
@@ -45,6 +48,7 @@ y = data['Fraud_indicator']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 
 # Preprocessing pipeline
+# Using Attributes for preprocessing the pipelines
 numeric_features = ['Transaction_Amount', 'Amount_paid', 'Vehicle_Speed', 'Hour', 'Day_of_Week']
 categorical_features = ['Vehicle_Type', 'FastagID', 'TollBoothID', 'Lane_Type', 'Geographical_Location', 'Vehicle_Dimensions']
 
