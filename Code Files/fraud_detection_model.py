@@ -10,8 +10,11 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
+# Random Forest Classifier Import
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+
+# import from SMOTE
 from imblearn.over_sampling import SMOTE
 
 # Load the dataset
