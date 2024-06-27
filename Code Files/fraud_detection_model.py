@@ -33,10 +33,15 @@ plt.show()
 # Data preprocessing
 # Preprocessing Fastag Id, Transaction Id and other details
 data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%m/%d/%Y %H:%M')
+# Hours
 data['Hour'] = data['Timestamp'].dt.hour
+# Days of Week Data
 data['Day_of_Week'] = data['Timestamp'].dt.dayofweek
+# Vehicle details, transaction details, and timings
 data = data.drop(columns=['Transaction_ID', 'Timestamp', 'Vehicle_Plate_Number'])
+# Fastag details
 data['FastagID'] = data['FastagID'].fillna('Unknown')
+# Fraud Indicator 1 for fraud found 0 for not found
 data['Fraud_indicator'] = data['Fraud_indicator'].map({'Fraud': 1, 'Not Fraud': 0})
 
 # One-hot encode categorical variables
