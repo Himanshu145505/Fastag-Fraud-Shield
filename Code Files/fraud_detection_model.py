@@ -90,8 +90,7 @@ model.fit(X_train_processed, y_train_res)
 # Prediction on DataSet Y 
 y_pred = model.predict(X_test_processed)
 
-# Evaluate the model
-Model Performance Evaluation
+# Model Performance Evaluation
 print('Accuracy:', accuracy_score(y_test, y_pred))
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
@@ -99,6 +98,7 @@ print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
 
 # Feature importance
+# the features that are used for predicting the fraud
 feature_importance = model.named_steps['classifier'].feature_importances_
 feature_names = model.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names_out()
 all_feature_names = numeric_features + list(feature_names)
