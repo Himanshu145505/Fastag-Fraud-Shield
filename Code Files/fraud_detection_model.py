@@ -117,4 +117,5 @@ feature_importance_df = feature_importance_df.sort_values(by='importance', ascen
 # Plot feature importance
 sns.barplot(x='importance', y='feature', data=feature_importance_df.head(10))
 plt.title('Top 10 Important Features')
+# Model Show in bar
 plt.show()
