@@ -66,7 +66,7 @@ numeric_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='median')),
     ('scaler', StandardScaler())])
 
-
+# Categorial Impute
 categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
@@ -101,6 +101,7 @@ y_pred = model.predict(X_test_processed)
 
 # Model Performance Evaluation
 print('Accuracy:', accuracy_score(y_test, y_pred))
+# Classification
 print('Classification Report:')
 print(classification_report(y_test, y_pred))
 print('Confusion Matrix:')
