@@ -1,6 +1,8 @@
 # Required Imports
 import pandas as pd
+# numpy import
 import numpy as np
+# matplotlib import
 import matplotlib.pyplot as plt
 import seaborn as sns
 
