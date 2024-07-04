@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 # matplotlib import
 import matplotlib.pyplot as plt
+# seaborn import
 import seaborn as sns
 
 # Sklearn Mode for Selection
@@ -29,7 +30,9 @@ data = pd.read_csv('FastagFraudDetection.csv')
 
 # Data exploration
 print(data.info())
+# Data Describe 
 print(data.describe())
+# Indicator
 print(data['Fraud_indicator'].value_counts())
 
 
