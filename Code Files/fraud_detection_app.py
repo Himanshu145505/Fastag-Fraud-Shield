@@ -21,6 +21,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 # Metrics of data
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+# Over Sampling 
 from imblearn.over_sampling import SMOTE
 # Flask Application Imports
 from flask import Flask, request, jsonify
