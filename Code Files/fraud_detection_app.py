@@ -48,9 +48,10 @@ data['Hour'] = data['Timestamp'].dt.hour
 # Day of Week
 data['Day_of_Week'] = data['Timestamp'].dt.dayofweek
 # Transaction Id and Time Stamp
-data = data.drop(columns=['Transaction_ID', 'Timestamp', 'Vehicle_Plate_Number
-
+data = data.drop(columns=['Transaction_ID', 'Timestamp', 'Vehicle_Plate_Number']
+# Fastag id
 data['FastagID'] = data['FastagID'].fillna('Unknown')
+# Fraud Indicator
 data['Fraud_indicator'] = data['Fraud_indicator'].map({'Fraud': 1, 'Not Fraud': 0})
 
 X = data.drop(columns=['Fraud_indicator'])
