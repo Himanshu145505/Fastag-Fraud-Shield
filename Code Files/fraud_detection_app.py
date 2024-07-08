@@ -47,8 +47,9 @@ data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%m/%d/%Y %H:%M')
 data['Hour'] = data['Timestamp'].dt.hour
 # Day of Week
 data['Day_of_Week'] = data['Timestamp'].dt.dayofweek
+# Transaction Id and Time Stamp
+data = data.drop(columns=['Transaction_ID', 'Timestamp', 'Vehicle_Plate_Number
 
-data = data.drop(columns=['Transaction_ID', 'Timestamp', 'Vehicle_Plate_Number'])
 data['FastagID'] = data['FastagID'].fillna('Unknown')
 data['Fraud_indicator'] = data['Fraud_indicator'].map({'Fraud': 1, 'Not Fraud': 0})
 
