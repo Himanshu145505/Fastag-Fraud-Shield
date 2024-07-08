@@ -41,6 +41,7 @@ sns.countplot(x='Fraud_indicator', data=data)
 plt.show()
 
 # Data preprocessing
+# Time Stamp
 data['Timestamp'] = pd.to_datetime(data['Timestamp'], format='%m/%d/%Y %H:%M')
 data['Hour'] = data['Timestamp'].dt.hour
 data['Day_of_Week'] = data['Timestamp'].dt.dayofweek
