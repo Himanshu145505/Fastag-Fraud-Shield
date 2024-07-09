@@ -36,8 +36,9 @@ print(data.describe())
 # Indicator
 print(data['Fraud_indicator'].value_counts())
 
-
+# Fraud Indicator
 sns.countplot(x='Fraud_indicator', data=data)
+
 plt.show()
 
 # Data preprocessing
