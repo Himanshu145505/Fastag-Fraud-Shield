@@ -3,8 +3,9 @@
 import pandas as pd
 # Numpy
 import numpy as np
-
+# matplotlib
 import matplotlib.pyplot as plt
+# Seaborn
 import seaborn as sns
 
 # Preprocessing, pipeline, compose, ensemble , impute and other imports from Scikit Learn
