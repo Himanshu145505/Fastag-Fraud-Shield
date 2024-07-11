@@ -17,6 +17,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 # Pipeline
 from sklearn.pipeline import Pipeline
+# SimpleImputer
 from sklearn.impute import SimpleImputer
 # Random Forest Classifier Import
 from sklearn.ensemble import RandomForestClassifier
