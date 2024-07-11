@@ -11,9 +11,11 @@ import seaborn as sns
 # Preprocessing, pipeline, compose, ensemble , impute and other imports from Scikit Learn
 # Scikit Learn
 from sklearn.model_selection import train_test_split
-# Standard  Scaler import
+# Standard  Scaler import, OneHotEncoder Import
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
+# Column Transformer
 from sklearn.compose import ColumnTransformer
+# Pipeline
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 # Random Forest Classifier Import
