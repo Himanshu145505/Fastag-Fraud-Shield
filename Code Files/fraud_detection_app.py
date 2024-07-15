@@ -93,6 +93,7 @@ model = Pipeline(steps=[
 X stand for the first set of data that will be used for training and Y stand for 2nd set of data that will be used for testing
 # X Train Preprocessor
 X_train_transformed = preprocessor.fit_transform(X_train)
+# X Test Transformed
 X_test_transformed = preprocessor.transform(X_test)
 
 # Handle imbalanced dataset
