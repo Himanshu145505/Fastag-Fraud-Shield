@@ -35,6 +35,7 @@ data = pd.read_csv('FastagFraudDetection.csv')
 print(data.info())
 # describe
 print(data.describe())
+# Value Counts
 print(data['Fraud_indicator'].value_counts())
 
 sns.countplot(x='Fraud_indicator', data=data)
