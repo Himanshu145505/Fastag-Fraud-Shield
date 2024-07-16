@@ -38,7 +38,9 @@ print(data.describe())
 # Value Counts
 print(data['Fraud_indicator'].value_counts())
 
+# Data
 sns.countplot(x='Fraud_indicator', data=data)
+# Show
 plt.show()
 
 # Data preprocessing
@@ -61,6 +63,7 @@ data = pd.get_dummies(data, columns=['Vehicle_Type'])
 
 # Spliting the data into two indicator for dataset x and y that are derived the the main dataset FasTagfraudDetection.csv
 X = data.drop(columns=['Fraud_indicator'])
+# Indicator
 y = data['Fraud_indicator']
 
 
