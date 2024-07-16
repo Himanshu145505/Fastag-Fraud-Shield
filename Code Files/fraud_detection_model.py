@@ -33,6 +33,7 @@ data = pd.read_csv('FastagFraudDetection.csv')
 
 # Data exploration
 print(data.info())
+# describe
 print(data.describe())
 print(data['Fraud_indicator'].value_counts())
 
