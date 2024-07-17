@@ -80,7 +80,7 @@ categorical_features = ['Vehicle_Type', 'FastagID', 'TollBoothID', 'Lane_Type', 
 numeric_transformer = Pipeline(steps=[
     # imputer
     ('imputer', SimpleImputer(strategy='median')),
-    
+    # Scaler
     ('scaler', StandardScaler())])
 
 # Categorial Impute
