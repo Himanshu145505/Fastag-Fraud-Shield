@@ -85,17 +85,21 @@ numeric_transformer = Pipeline(steps=[
 
 # Categorial Impute
 categorical_transformer = Pipeline(steps=[
+    # imputer
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+    # oneshot
     ('onehot', OneHotEncoder(handle_unknown='ignore'))])
 
 # category and numeric preprocessing
 preprocessor = ColumnTransformer(
     transformers=[
+        # Transformers
         ('num', numeric_transformer, numeric_features),
         ('cat', categorical_transformer, categorical_features)])
 
 # Model pipeline
 model = Pipeline(steps=[
+    # Pipeline
     ('preprocessor', preprocessor),
     ('classifier', RandomForestClassifier(random_state=42))
 ])
