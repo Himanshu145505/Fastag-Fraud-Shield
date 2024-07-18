@@ -85,7 +85,9 @@ preprocessor = ColumnTransformer(
 
 # Model pipeline
 model = Pipeline(steps=[
+    # Preprocessor
     ('preprocessor', preprocessor),
+    # Classifier
     ('classifier', RandomForestClassifier(random_state=42))
 ])
 
