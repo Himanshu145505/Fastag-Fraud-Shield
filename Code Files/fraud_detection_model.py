@@ -125,8 +125,10 @@ y_pred = model.predict(X_test_processed)
 print('Accuracy:', accuracy_score(y_test, y_pred))
 # Classification
 print('Classification Report:')
+# Classification Report
 print(classification_report(y_test, y_pred))
 print('Confusion Matrix:')
+# Y Test and Y Pred
 print(confusion_matrix(y_test, y_pred))
 
 # Feature importance
