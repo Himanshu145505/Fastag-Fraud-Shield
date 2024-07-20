@@ -10,6 +10,7 @@ import seaborn as sns
 # Sklearn Mode for Selection
 from sklearn.model_selection import train_test_split
 # model for preprocessing the data
+# Standard Scaler, OnehotEnco
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 # model for composing
 from sklearn.compose import ColumnTransformer
