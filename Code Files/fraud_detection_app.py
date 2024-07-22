@@ -84,7 +84,9 @@ categorical_transformer = Pipeline(steps=[
 # Preprocessing the Pipleline
 preprocessor = ColumnTransformer(
     transformers=[
+        # num
         ('num', numeric_transformer, numeric_features),
+        # Categorical
         ('cat', categorical_transformer, categorical_features)])
 
 # Model pipeline
