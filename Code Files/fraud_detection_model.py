@@ -95,6 +95,7 @@ preprocessor = ColumnTransformer(
     transformers=[
         # Transformers
         ('num', numeric_transformer, numeric_features),
+        categorial
         ('cat', categorical_transformer, categorical_features)])
 
 # Model pipeline
