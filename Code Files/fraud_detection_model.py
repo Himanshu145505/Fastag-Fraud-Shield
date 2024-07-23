@@ -108,6 +108,7 @@ model = Pipeline(steps=[
 
 # Handle imbalanced dataset
 smote = SMOTE(random_state=42)
+# X training and testing data
 X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
 
 # Preprocess the data
