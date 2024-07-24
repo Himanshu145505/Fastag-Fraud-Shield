@@ -138,6 +138,7 @@ print(confusion_matrix(y_test, y_pred))
 # the features that are used for predicting the fraud
 feature_importance = model.named_steps['classifier'].feature_importances_
 feature_names = model.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names_out()
+# ALL Features Names
 all_feature_names = numeric_features + list(feature_names)
 feature_importance_df = pd.DataFrame({'feature': all_feature_names, 'importance': feature_importance})
 feature_importance_df = feature_importance_df.sort_values(by='importance', ascending=False)
