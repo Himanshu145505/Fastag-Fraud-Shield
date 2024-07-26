@@ -137,6 +137,7 @@ print(confusion_matrix(y_test, y_pred))
 # Feature importance
 # the features that are used for predicting the fraud
 feature_importance = model.named_steps['classifier'].feature_importances_
+# Named Steps
 feature_names = model.named_steps['preprocessor'].transformers_[1][1].named_steps['onehot'].get_feature_names_out()
 # ALL Features Names
 all_feature_names = numeric_features + list(feature_names)
